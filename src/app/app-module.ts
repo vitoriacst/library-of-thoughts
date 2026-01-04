@@ -9,6 +9,7 @@ import { Header } from './components/header/header';
 import { Create } from './components/thinkings/create/create';
 import { Home } from './home/home';
 import { List } from './components/thinkings/list/list';
+import { Card } from './components/thinkings/card/card';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { List } from './components/thinkings/list/list';
     Header,
     Footer,
     Create,
-    List
+    List,
+    Card
   ],
   imports: [
     BrowserModule,

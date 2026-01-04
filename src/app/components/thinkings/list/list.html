@@ -3,4 +3,9 @@
     <h2 class="ff-inter">Meu Mural</h2>
     <button routerLink="/create" class="botao">Adicionar Pensamento</button>
   </header>
+  <div class="mural">
+    <ng-container *ngFor="let think of list">
+      <app-card [pensamento]="think"></app-card>
+    </ng-container>
+  </div>
 </section>
