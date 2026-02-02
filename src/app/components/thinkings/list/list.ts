@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Think } from '../think';
+import { ThinkService } from '../think.service';
 
 @Component({
   selector: 'app-list',
@@ -7,16 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './list.css',
 })
 export class List {
-  list = [
-      {
-        content: 'I love Angular',
-        authorsip:'developer',
-        model:'modelo3'
-      },
-      {
-        content: 'Minha propriedade é decorada com  o @Input',
-        authorsip:'dev',
-        model:'modelo1'
+  list: Think[] = []
+
+  constructor(private service: ThinkService){}
+
+  ngOnInit():void {
+    this.service.list().subscribe(
+      (items) => {
+        this.list  = items
       }
-  ]
+    )
+  }
 }

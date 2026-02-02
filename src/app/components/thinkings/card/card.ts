@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.css',
 })
 export class Card {
-  @Input() pensamento: any
+  @Input() pensamento: any;
 
 
   widthThought(){
