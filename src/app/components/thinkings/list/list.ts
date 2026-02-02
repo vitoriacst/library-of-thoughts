@@ -9,15 +9,13 @@ import { ThinkService } from '../think.service';
   styleUrl: './list.css',
 })
 export class List {
-  list: Think[] = []
+  list: Think[] = [];
 
-  constructor(private service: ThinkService){}
+  constructor(private service: ThinkService) {}
 
-  ngOnInit():void {
-    this.service.list().subscribe(
-      (items) => {
-        this.list  = items
-      }
-    )
+  ngOnInit(): void {
+    this.service.list().subscribe((items) => {
+      this.list = items;
+    });
   }
 }

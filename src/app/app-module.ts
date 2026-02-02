@@ -13,24 +13,9 @@ import { List } from './components/thinkings/list/list';
 import { Home } from './home/home';
 
 @NgModule({
-  declarations: [
-    App,
-    Home,
-    Header,
-    Footer,
-    Create,
-    List,
-    Card
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
-  bootstrap: [App]
+  declarations: [App, Home, Header, Footer, Create, List, Card],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}

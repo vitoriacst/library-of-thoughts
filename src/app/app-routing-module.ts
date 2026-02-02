@@ -6,21 +6,21 @@ import { List } from './components/thinkings/list/list';
 const routes: Routes = [
   {
     path: '',
-    pathMatch:'full',
-    redirectTo: 'list'
+    pathMatch: 'full',
+    redirectTo: 'list',
   },
   {
     path: 'create',
-    component: Create
+    component: Create,
   },
   {
     path: 'list',
-    component: List
-  }
+    component: List,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

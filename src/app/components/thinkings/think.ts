@@ -1,6 +1,6 @@
 export interface Think {
-  id?: number,
-  content: string,
-   authorship: string,
-   model: string
+  id?: number;
+  content: string;
+  authorship: string;
+  model: string;
 }

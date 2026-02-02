@@ -7,16 +7,14 @@ import { Think } from './think';
   providedIn: 'root',
 })
 export class ThinkService {
-  private readonly API = 'http://localhost:3000/pensamentos'
-  constructor(private http: HttpClient){
+  private readonly API = 'http://localhost:3000/pensamentos';
+  constructor(private http: HttpClient) {}
 
+  list(): Observable<Think[]> {
+    return this.http.get<Think[]>(this.API);
   }
 
-  list(): Observable<Think[]>{
-    return this.http.get<Think[]>(this.API)
-  }
-
-  create(think: Think): Observable<Think>{
-    return this.http.post<Think>(this.API, think)
+  create(think: Think): Observable<Think> {
+    return this.http.post<Think>(this.API, think);
   }
 }
