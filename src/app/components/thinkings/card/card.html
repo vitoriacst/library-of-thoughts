@@ -1,9 +1,9 @@
 <div class="pensamento {{ thinkings.model }} ff-roboto-mono">
   <img src="/assets/imagens/{{ thinkings.model }}.png" alt="Aspas coloridas">
   <p class="conteudo">{{ thinkings.content }}</p>
-  <p class="autoria"><b>{{ thinkings.authorsip }}</b></p>
+  <p class="autoria"><b>{{ thinkings.authorship }}</b></p>
   <div class="acoes">
-    <button class="botao-editar">
+    <button class="botao-editar"  routerLink="/thinkings/update/{{thinkings.id}}">
       <img src="/assets/imagens/icone-editar.png" alt="Ícone de editar">
     </button>
     <button class="botao-excluir" routerLink="/thinkings/delete/{{thinkings.id}}">

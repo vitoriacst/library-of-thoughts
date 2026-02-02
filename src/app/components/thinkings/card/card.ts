@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Think } from '../think';
 
 @Component({
   selector: 'app-card',
@@ -7,7 +8,21 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.css',
 })
 export class Card {
-  @Input() thinkings: any;
+  @Input() thinkings: Think = {
+    id: '0',
+    authorship: 'vivi',
+    model: 'moodelo3',
+    content: 'teste',
+  };
 
-  widthThought() {}
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  widthThought() {
+    if (this.thinkings.content.length >= 256) {
+      return 'pensamento-g';
+    }
+    return 'pensamento-p';
+  }
 }

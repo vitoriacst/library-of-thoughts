@@ -4,14 +4,14 @@ import { Think } from '../think';
 import { ThinkService } from '../think.service';
 
 @Component({
-  selector: 'app-delete',
+  selector: 'app-update',
   standalone: false,
-  templateUrl: './delete.html',
-  styleUrl: './delete.css',
+  templateUrl: './update.html',
+  styleUrl: './update.css',
 })
-export class Delete {
-  think: Think = {
-    id: '',
+export class Update {
+  thought: Think = {
+    id: '0',
     content: '',
     authorship: '',
     model: '',
@@ -26,16 +26,15 @@ export class Delete {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.searchById(id!).subscribe((item) => {
-      this.think = item;
+      this.thought = item;
     });
   }
 
-  delete() {
-    if (this.think.id) {
-      this.service.delete(this.think.id).subscribe(() => {
-        this.router.navigate(['/list']);
-      });
-    }
+  edit() {
+    console.log('chamou', this.thought);
+    this.service.update(this.thought).subscribe(() => {
+      this.router.navigate(['/list']);
+    });
   }
 
   cancel() {

@@ -12,9 +12,10 @@ import { Create } from './components/thinkings/create/create';
 import { List } from './components/thinkings/list/list';
 import { Home } from './home/home';
 import { Delete } from './components/thinkings/delete/delete';
+import { Update } from './components/thinkings/update/update';
 
 @NgModule({
-  declarations: [App, Home, Header, Footer, Create, List, Card, Delete],
+  declarations: [App, Home, Header, Footer, Create, List, Card, Delete, Update],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
