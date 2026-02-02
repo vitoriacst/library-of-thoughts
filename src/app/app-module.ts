@@ -11,9 +11,10 @@ import { Card } from './components/thinkings/card/card';
 import { Create } from './components/thinkings/create/create';
 import { List } from './components/thinkings/list/list';
 import { Home } from './home/home';
+import { Delete } from './components/thinkings/delete/delete';
 
 @NgModule({
-  declarations: [App, Home, Header, Footer, Create, List, Card],
+  declarations: [App, Home, Header, Footer, Create, List, Card, Delete],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

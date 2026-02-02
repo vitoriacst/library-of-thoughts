@@ -17,4 +17,14 @@ export class ThinkService {
   create(think: Think): Observable<Think> {
     return this.http.post<Think>(this.API, think);
   }
+
+  delete(id: string): Observable<Think> {
+    const url = `${this.API}/${id}`;
+    return this.http.delete<Think>(url);
+  }
+
+  searchById(id: string): Observable<Think> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<Think>(url);
+  }
 }

@@ -1,5 +1,5 @@
 export interface Think {
-  id?: number;
+  id?: string;
   content: string;
   authorship: string;
   model: string;
